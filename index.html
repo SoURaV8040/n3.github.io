@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Animation Test</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #all {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(4, auto);
+      }
+      .aniButton {
+        text-decoration: none;
+        background: linear-gradient(#cecece, #8b8b8b);
+        padding: 1vh;
+        border-radius: 5%;
+        color: #001f22;
+        font-size: 2vh;
+        font-family: cursive;
+        text-shadow: 0 0 1px #ffffff;
+        margin: 1vh;
+        border: 1px solid #2a0101;
+        box-shadow: inset -1px -1px 5px #fff, 
+                     inset 1px 1px 5px #616161,
+                     1px 1px 3px #8a8a8a,
+                     -1px -1px 6px #242323;
+        animation: ani 4s linear infinite;
+        transition: 0.1s ease;
+      }
+      @keyframes ani {
+        0% {
+          color: #001f22;
+        }
+        50% {
+          color: #ff0000;
+        }
+        100% {
+          color: #001f22;
+        }
+      }
+      .aniButton:hover {
+        background: linear-gradient(#202020, #404040);
+        color: #00ffff;
+        animation: ani2 4s linear infinite;
+        box-shadow: -1px -1px 1px #474747;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="all">
+      <a href="ani1.html" class="aniButton">animation-01</a>
+      <a href="ani2.html" class="aniButton">animation-02</a>
+      <a href="ani3.html" class="aniButton">animation-03</a>
+      <a href="ani4.html" class="aniButton">animation-04</a>
+      <a href="ani5.html" class="aniButton">animation-05</a>
+      <a href="ani6.html" class="aniButton">animation-06</a>
+      <a href="ani7.html" class="aniButton">animation-07</a>
+      <a href="ani8.html" class="aniButton">animation-08</a>
+      <a href="#" class="aniButton">animation-09</a>
+      <a href="#" class="aniButton">animation-10</a>
+      <a href="#" class="aniButton">animation-11</a>
+      <a href="#" class="aniButton">animation-12</a>
+      <a href="#" class="aniButton">animation-13</a>
+      <a href="#" class="aniButton">animation-14</a>
+      <a href="#" class="aniButton">animation-15</a>
+      <a href="#" class="aniButton">animation-16</a>
+      <a href="#" class="aniButton">animation-17</a>
+      <a href="#" class="aniButton">animation-18</a>
+      <a href="#" class="aniButton">animation-19</a>
+      <a href="#" class="aniButton">animation-20</a>
+    </div>
+  </body>
+</html>

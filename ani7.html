@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Animation Made By Sourav</title>
+   <style>
+      *
+      {
+         margin: 0;
+         padding: 0;
+      }
+      body
+      {
+         min-height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #000718;
+      }
+      .loader
+      {
+         position: relative;
+         border-radius: 100%;
+         width: 30vh;
+         height: 30vh;
+         overflow: hidden;
+         border:  .1vh solid #01091b;
+         box-shadow: -5px -5px 5px #000d2c,
+                     10px 10px 10px rgba(0, 0, 0,0.4),
+                     inset  10px 10px 10px rgba(0, 0, 0,0.4),
+                     inset -5px -5px 5px #01091b;
+      }
+      .loader::before
+      {
+         content: '';
+         position: absolute;
+         width: 20vh;
+         height: 20vh;
+         margin: 5vh;
+         border-radius: 100%;
+         background: #000718;
+         box-shadow: -2px -2px 5px #01091b,
+                     10px 10px 10px rgba(0, 0, 0,0.4),
+                     inset  2px 2px 5px #01091b,
+                     inset -2px -2px 5px rgba(0, 0, 0,0.4);
+                     z-index: 1;
+      }
+      span
+      {
+         position:absolute;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+         filter: blur(3vh);
+         animation: ani .5s linear infinite;
+      }
+      @keyframes ani
+      {
+         0%{
+            transform: rotate(0deg);
+         }
+         100%{
+            transform: rotate(360deg);
+         }
+      }
+   </style>
+</head>
+<body>
+   <div class="loader">  
+      <span></span>
+   </div>
+</body>
+</html>

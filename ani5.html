@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      section
+      {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         background:linear-gradient(#0e1623 ,#000a1a);
+         overflow: hidden;
+      }
+      .txt
+      {
+         position: absolute;
+         font-size: 10rem;
+         text-align: center;
+         color: #00ff70;
+         transition: 1.5s;
+         -webkit-box-reflect: below -0.5em linear-gradient(transparent,#0008) ;
+      }
+      span 
+      {
+         position: absolute;
+         font-size: 300vh;
+         left: 20%;
+         text-align: center;
+         color: transparent;
+         transition: .01s;
+         text-shadow:none;
+
+         -webkit-box-reflect: below -0.4em linear-gradient(transparent,#0008) ;
+         
+      }
+   </style>
+</head>
+<body>
+   <section>
+      <!-- <h2 class="txt">SoURaV Mins RoGeR</h2> -->
+      <span>S</span>
+      <span>o</span>
+      <span>U</span>
+      <span>R</span>
+      <span>a</span>
+      <span>V</span>
+      <span>M</span>
+      <span>e</span>
+      <span>a</span>
+      <span>n</span>
+      <span>R</span>
+      <span>o</span>
+      <span>G</span>
+      <span>e</span>
+      <span>R</span>
+   </section>
+   <script>
+    function again(){
+         const spanS = document.querySelectorAll('span')[0];
+         const spanO = document.querySelectorAll('span')[1];
+         const spanU = document.querySelectorAll('span')[2];
+         const spanR = document.querySelectorAll('span')[3];
+         const spanA = document.querySelectorAll('span')[4];
+         const spanV = document.querySelectorAll('span')[5];
+         const spanM = document.querySelectorAll('span')[6];
+         const spanE = document.querySelectorAll('span')[7];
+         const spanAA = document.querySelectorAll('span')[8];
+         const spanN = document.querySelectorAll('span')[9];
+         const spanRR = document.querySelectorAll('span')[10];
+         const spanOO = document.querySelectorAll('span')[11];
+         const spanG = document.querySelectorAll('span')[12];
+         const spanEE = document.querySelectorAll('span')[13];
+         const spanRRR = document.querySelectorAll('span')[14];
+
+         // LETTER DESING........
+         spanS.style.left = "3%";
+         spanO.style.left = "8%";
+         spanU.style.left = "13%";
+         spanR.style.left = "19%";
+         spanA.style.left = "25%";
+         spanV.style.left = "29%";
+         spanM.style.left = "41%";
+         spanE.style.left = "49%";
+         spanAA.style.left = "54%";
+         spanN.style.left = "59%";
+         spanRR.style.left = "71%";
+         spanOO.style.left = "76.5%";
+         spanG.style.left = "82%";
+         spanEE.style.left = "88.5%";
+         spanRRR.style.left = "93%";
+
+         //  varebel ...........
+         var length = 15;
+         var vr1 = 0;
+         var vr2 = 0;
+         var vr3 = 0;
+         var vr4 = 0;
+         var vr5 = 0;
+         var f = true;
+
+         //animate text start hear..........
+         function stef1(vr1) {
+            const span = document.querySelectorAll('span')[vr1];
+            span.style.fontSize = "9vw";
+            span.style.color = "#00ff70";
+            span.style.transition = ".4s";
+            span.style.textShadow = "0 0 2px #00ff70," +
+               "0 0 5px #00ff70," +
+               "0 0 10px #00ff70,";
+         }
+
+         function stef2(vr2) {
+            const span1 = document.querySelectorAll('span')[vr2];
+            span1.style.top = "35%";
+            span1.style.transition = ".01s";
+         }
+
+         function stef3(vr3) {
+            const span2 = document.querySelectorAll('span')[vr3];
+            span2.style.top = "42%";
+            span2.style.transition = ".01s";
+         }
+
+         function stef4(vr4) {
+            const span2 = document.querySelectorAll('span')[vr4];
+            span2.style.left = "-10%";
+            span2.style.transition = ".3s";
+         }
+
+         function stef5(vr5) {
+            const span = document.querySelectorAll('span')[vr5];
+            span.style.transition = ".3s";
+            span.style.top = "42%";
+            span.style.transitionTimingFunction = "cubic-bezier(.5,1.13,1,1.07)";
+         }
+
+
+         // call animation dhely .........
+         setInterval(() => {
+            if (vr1 != length) {
+               stef1(vr1)
+               vr1 += 1;
+            }
+         }, 200);
+
+         setInterval(() => {
+            if (vr1 == length && vr2 != length) {
+               stef2(vr2)
+               vr2 += 1;
+            }
+         }, 60);
+
+         setInterval(() => {
+            if (vr2 > 2 && vr3 != length) {
+               stef3(vr3)
+               vr3 += 1;
+               if (vr3 == length) {
+                  setTimeout(() => {
+                     letStart1();
+                  }, 500)
+               }
+            }
+         }, 60);
+
+         function letStart1() {
+            setInterval(() => {
+               if (vr3 == length && vr4 != length) {
+                  stef4(vr4);
+                  vr4 += 1;
+                  if (vr4 == length) {
+                     setTimeout(() => {
+                        letStart2();
+                     }, 1000)
+                  }
+               }
+            }, 200)
+         }
+
+         function letStart2() {
+            setInterval(() => {
+               if (vr4 == length && vr5 != length) {
+                  xyz();
+                  stef5(vr5);
+                  vr5 += 1;
+               }
+            }, 200)
+         }
+
+
+         function xyz() {
+            if (f == true) {
+               for (let b = 0; b < length; b++){
+                  const spaN = document.querySelectorAll('span')[b];
+                  spaN.style.transition = ".001s";
+                  spaN.style.top = "-50%";
+               }
+                  spanS.style.left = "3%";
+                  spanO.style.left = "8%";
+                  spanU.style.left = "13%";
+                  spanR.style.left = "19%";
+                  spanA.style.left = "25%";
+                  spanV.style.left = "29%";
+                  spanM.style.left = "41%";
+                  spanE.style.left = "49%";
+                  spanAA.style.left = "54%";
+                  spanN.style.left = "59%";
+                  spanRR.style.left = "71%";
+                  spanOO.style.left = "76.5%";
+                  spanG.style.left = "82%";
+                  spanEE.style.left = "88.5%";
+                  spanRRR.style.left = "93%";
+               f = false;
+            }
+         }
+      }
+      again();
+   </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Animation Made By Sourav</title>
+   <style>
+      *
+      {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Times New Roman', Times, serif;
+      }
+      body
+      {
+         background: #141414;
+      }
+      .s1
+      {
+         position: relative;
+         width: 100%;
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: #0084ff;
+         overflow: hidden;
+      }
+      .s1 h2
+      {
+         position: relative;
+         font-size: 3.3rem;
+         color: aliceblue;
+      }
+      .s2
+      {
+         padding: 50px;
+      }
+      .s2 h2
+      {
+         font-size: 2rem;
+         color: #0084ff;
+         text-shadow: 0 0 2px wheat;
+      }
+      p
+      {
+         color: #948f8f;
+         text-shadow: 0 0 1px black;
+      }
+      .leftSide
+      {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         right: 50%;
+         bottom: -100%;
+         transform: skewY(25deg);
+         transform-origin: top right;
+         background: #141414;
+      }
+      .rightSide
+      {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         left: 50%;
+         bottom: -100%;
+         transform: skewY(-25deg);
+         transform-origin: top left;
+         background: #141414;
+      }
+   </style>
+</head>
+<body>
+   <section class="s1">
+      <h2>Scroll Effects M.B. SouraV</h2>
+      <span class="leftSide"></span>
+      <span class="rightSide"></span>
+   </section>
+   <section class="s2">
+      <h2>Hello Worald!</h2>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         Veniam earum maiores rem voluptatum, molestias,
+          temporibus numquam illum iste error quas nihil odit, similique
+           obcaecati! Enim harum in similique officia adipisci.</P><br><br><P>
+          em ipsum dolor sit amet consectetur adipisicing elit. 
+          m earum maiores rem voluptatum, molestias,
+          oribus numquam illum iste error quas nihil odit, similique
+          aecati! Enim harum in similique officia adipisci.</P><br><br><P>
+          rem ipsum dolor sit amet consectetur adipisicing elit. 
+          am earum maiores rem voluptatum, molestias,
+          poribus numquam illum iste error quas nihil odit, similique
+          caecati! Enim harum in similique officia adipisci.</P><br><br><P>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          eniam earum maiores rem voluptatum, molestias,
+          temporibus numquam illum iste error quas nihil odit, similique
+           obcaecati! Enim harum in similique officia adipisci.
+          caecati! Enim harum in similique officia adipisci.</P><br><br><P>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          eniam earum maiores rem voluptatum, molestias,
+          temporibus numquam illum iste error quas nihil odit, similique
+           obcaecati! Enim harum in similique officia adipisci.
+          caecati! Enim harum in similique officia adipisci.</P><br><br><P>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          eniam earum maiores rem voluptatum, molestias,
+          temporibus numquam illum iste error quas nihil odit, similique
+           obcaecati! Enim harum in similique officia adipisci.
+          caecati! Enim harum in similique officia adipisci.</P><br><br><P>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          eniam earum maiores rem voluptatum, molestias,
+          temporibus numquam illum iste error quas nihil odit, similique
+           obcaecati! Enim harum in similique officia adipisci.
+          caecati! Enim harum in similique officia adipisci.</P><br><br>
+   </section>
+   <script>
+         const lefts = document.querySelector('.leftSide');
+         const rights = document.querySelector('.rightSide');
+
+         window.addEventListener('scroll', ()=>{
+         const a = -25+window.scrollY/15;
+         const b = 25+window.scrollY/-15;
+         lefts.style.transform = "skewY("+b+"deg)"
+         rights.style.transform = "skewY("+a+"deg)"
+      });
+   </script>
+</body>
+</html>

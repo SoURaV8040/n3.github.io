@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #1b1b1b;
+      }
+      h2 {
+        position: relative;
+        font-size: 3.4vh;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 1vh;
+      }
+      #form {
+        position: relative;
+        border: 0.4vh solid #131313;
+        background: linear-gradient(#1e2024, #18181c);
+        border-radius: 1vh;
+        overflow: hidden;
+      }
+      #form #email {
+        width: 35vh;
+        outline: none;
+        background: transparent;
+        border: navajowhite;
+        padding: 1vh 1.4vh;
+        color: #fff;
+        font-size: 2vh;
+      }
+      #form .indicator {
+        position: absolute;
+        top: 1.7vh;
+        right: 1.7vh;
+        width: 1vh;
+        height: 1vh;
+        background: #555;
+        border-radius: 50%;
+      }
+      #form.valid .indicator {
+        background: #0f0;
+        box-shadow: 0 0 0.5vh #0f0, 0 0 1vh #0f0, 0 0 1.5vh #0f0, 0 0 2vh #0f0,
+          0 0 3vh #0f0;
+      }
+      #form.invalid .indicator {
+        background: #f00;
+        box-shadow: 0 0 0.5vh #f00, 0 0 1vh #f00, 0 0 1.5vh #f00, 0 0 2vh #f00,
+          0 0 3vh #f00;
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Email  Validation Check</h2>
+        <form id="form" action="#">
+            <div class="inputBox">
+                <input type="text " id="email"
+                 placeholder="Enter Email Address" 
+                 onkeyup="validate()">
+                 <span class="indicator"></span>
+            </div>
+        </form>
+    </div>
+    <script >
+       function validate(){
+      const form = document.getElementById('form');
+      onst email = document.getElementById('email').value;
+      const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+   
+    if(email.match(pattern)){
+      form.classList.add('valid');
+      form.classList.remove('invalid');
+      }else{
+      form.classList.add('invalid');
+      form.classList.remove('valid');
+      }
+   }
+    </script>
+</body>
+</html>
