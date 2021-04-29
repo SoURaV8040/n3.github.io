@@ -127,17 +127,18 @@ h3
    </script>
 </head>
 <body id="body">
-   <script>
-      // create canvas for any display size********************************************************
-      let bodyw = document.body.offsetWidth; //....................................................*
-      let bodyh = document.body.offsetHeight; //...................................................*
-      const elem = document.createElement("canvas"); //............................................*
-      document.body.appendChild(elem); //....................Made By Sourav Barui..................*
-      elem.id = "canvas"; //.......................................................................*
-      elem.setAttribute("width", bodyw); //........................................................*
-      elem.setAttribute("height", bodyh); //.......................................................*
-      // ******************************************************************************************
-   </script>
+       <canvas id="canvas"></canvas>
+    <script>
+      // create canvas for any display size**********************************************************
+      let bodyw = document.body.offsetWidth; //......................................................*
+      let bodyh = document.body.offsetHeight; //.....................................................*
+      //const elem = document.createElement("canvas"); //............................................*
+      //document.body.appendChild(elem); //....................Made By Sourav Barui..................*
+      //elem.id = "canvas"; //.......................................................................*
+      document.getElementById("canvas").setAttribute("width", bodyw); //.............................*
+      document.getElementById("canvas").setAttribute("height", bodyh); //............................*
+      // ********************************************************************************************
+       </script>
    <div id="joystick" ontouchmove="joystick(event)"
                       ontouchstart="touchStart(event)">
                       <div id="bustOn"><h3>B</h3></div>
